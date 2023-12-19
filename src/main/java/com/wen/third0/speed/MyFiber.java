@@ -17,7 +17,7 @@ import static com.wen.third0.speed.MyThread.THREAD_LENGTH;
  * 内存:16g
  *
  * 线程用时:26543ms
- * 协程用时:504ms
+ * 协程用时:504ms 测
  *
  * 执行速度差异极大
  */
