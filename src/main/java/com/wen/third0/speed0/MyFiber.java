@@ -1,10 +1,10 @@
-package com.wen.third0.speed;
+package com.wen.third0.speed0;
 
 import co.paralleluniverse.fibers.Fiber;
 
 import java.util.concurrent.ExecutionException;
 
-import static com.wen.third0.speed.MyThread.THREAD_LENGTH;
+import static com.wen.third0.speed0.MyThread.THREAD_LENGTH;
 
 /**
  * @author: 7wen
@@ -13,11 +13,14 @@ import static com.wen.third0.speed.MyThread.THREAD_LENGTH;
  * 当线程/协程数达到 5w 的时候计算 5w*200w数据的时候
  * 线程因为要调用内核态所以资源消耗极大;协程只在用户态中执行,所以几乎没有什么消耗
  *
- * cpu:i5-13500H 2
+ * 执行5w个线程 是实实在在的有5w个线程切换内核态使用资源
+ * 执行5w个协程 分配了15个线程 也就是说只有15个线程在切换内核分配资源;而实际干活的协程又对内核透明,所以很快
+ *
+ * cpu:i5-13500H
  * 内存:16g
  *
  * 线程用时:26543ms
- * 协程用时:504ms 测
+ * 协程用时:504ms
  *
  * 执行速度差异极大
  */

@@ -1,4 +1,4 @@
-package com.wen.third0.speed;
+package com.wen.third0.speed0;
 
 /**
  * @author: 7wen
